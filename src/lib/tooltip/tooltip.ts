@@ -60,6 +60,7 @@ export function throwMdTooltipInvalidPositionError(position: string) {
     '(longpress)': 'show()',
     '(touchend)': 'hide(' + TOUCHEND_HIDE_DELAY + ')',
   },
+  styles: [':host {pointer-events: auto}'], // in case tooltip is inside a container without pointer events
   exportAs: 'mdTooltip',
 })
 export class MdTooltip implements OnDestroy {
